@@ -1,0 +1,16 @@
+/updatectl
+/updateserver
+/agent
+/bin/
+/dist/
+
+/releases/
+private.key
+*.key
+!public.key
+
+*.state
+*.old
+*.corrupt
+.tmp-*
+/launcher
