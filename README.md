@@ -76,4 +76,4 @@ Point the shortcut/service at `<root>/launcher`. SIGTERM is forwarded; SIGINT is
 * **Windows is unverified**: the Windows code has been compiled and vetted, never run. Install under the user's profile and don't run elevated from a user-writable directory (no ACL check). Services are unsupported.
 * No symlinks in packages, delta updates, key revocation or privileged install helper.
 
-Assumptions and test status: [ASSUMPTIONS.md](ASSUMPTIONS.md). Review record: [docs/AUDIT.md](docs/AUDIT.md).
+Assumptions and test status: [ASSUMPTIONS.md](ASSUMPTIONS.md). 
