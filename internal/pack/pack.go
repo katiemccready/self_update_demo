@@ -263,7 +263,7 @@ func (d diskSink) file(p string, exec bool, size int64, body io.Reader) (err err
 	mode := os.FileMode(0o644)
 	if exec {
 		mode = 0o755
-	}.
+	}
 	f, err := os.OpenFile(target, os.O_WRONLY|os.O_CREATE|os.O_EXCL, mode)
 	if err != nil {
 		return err
