@@ -58,8 +58,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
         with:
-          go-version-file: go.mod
-          check-latest: true
+          go-version: stable
       # Standard library vulnerabilities are the only ones that can apply (the
       # project has no dependencies), and they are fixed by the Go toolchain
       # version above, hence check-latest.

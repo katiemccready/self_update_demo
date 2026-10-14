@@ -4,6 +4,7 @@ import (
 	"errors"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"sync"
 	"testing"
@@ -110,6 +111,9 @@ func TestFailedSwitchRestoresStateAndRemovesTheDirectory(t *testing.T) {
 func TestPointerWriteFailureAfterTheRenameUndoesEverything(t *testing.T) {
 	s := newStore(t)
 
+	if runtime.GOOS == "windows" {
+		t.Skip("Windows ignores directory permission bits, so the root cannot be made read-only this way")
+	}
 	if os.Geteuid() == 0 {
 		t.Skip("root ignores directory permissions")
 	}
